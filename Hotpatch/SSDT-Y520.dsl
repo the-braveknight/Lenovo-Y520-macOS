@@ -8,8 +8,9 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y520", 0)
 
         // AUDL: Audio Layout
         //
-        // The value here will be used to inject layout-id for HDEF and HDAU
-        // If set to Ones, no audio injection will be done.
+        // LayoutID=7: Realtek ALC235 by the-braveknight
+        // LayoutID=14: Realtek ALC235 by vusun123
+        // LayoutID=2: Realtek ALC235 by Mirone
         Name(AUDL, 7)
     }
     

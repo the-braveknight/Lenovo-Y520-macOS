@@ -20,8 +20,8 @@ $(BUILDDIR)/%.aml : Hotpatch/%.dsl
 clean:
 	rm -f $(BUILDDIR)/*.aml
 
-.PHONY: install_y520
-install_y520: $(Y520)
+.PHONY: install
+install: $(Y520)
 	$(eval EFIDIR:=$(shell macos-tools/mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/*.aml
 	cp $(Y520) $(EFIDIR)/EFI/CLOVER/ACPI/patched

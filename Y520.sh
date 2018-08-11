@@ -68,6 +68,7 @@ case "$1" in
         macos-tools/install_kext.sh -d $kexts_dir -e $kexts_exceptions
         $0 --install-hdainjector
         $0 --install-backlightinjector
+        $0 --install-voodootscsync
         $0 --update-kernelcache
     ;;
     --install-essential-kexts)
@@ -80,6 +81,9 @@ case "$1" in
     ;;
     --install-backlightinjector)
         macos-tools/install_kext.sh $local_kexts_dir/AppleBacklightInjector.kext
+    ;;
+    --install-voodootscsync)
+        macos-tools/install_kext.sh $local_kexts_dir/VoodooTSCSync.kext
     ;;
     --update-kernelcache)
         sudo kextcache -i /

@@ -170,7 +170,7 @@
 			<true/>
 		</dict>
 		<key>ig-platform-id</key>
-		<string>0x591b0006</string>
+		<string>0x591b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>

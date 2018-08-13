@@ -13,14 +13,18 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
             Return(Package()
             {
+                // 32MB BIOS, 19MB framebuffer, 9MB cursor bytes
                 "framebuffer-patch-enable", Buffer() { 0x01, 0x00, 0x00, 0x00 },
                 "framebuffer-stolenmem", Buffer() { 0x00, 0x00, 0x30, 0x01 },
                 "framebuffer-fbmem", Buffer() { 0x00, 0x00, 0x90, 0x00 },
+                
+                // Disable connectors @1 & @2
                 "framebuffer-con1-enable", Buffer() { 0x01, 0x00, 0x00, 0x00 },
                 "framebuffer-con1-type", Buffer() { 0x01, 0x00, 0x00, 0x00 },
                 "framebuffer-con2-enable", Buffer() { 0x01, 0x00, 0x00, 0x00 },
                 "framebuffer-con2-type", Buffer() { 0x01, 0x00, 0x00, 0x00 },
-                "framebuffer-pipecount", Buffer() { 0x01, 0x00, 0x00, 0x00 },                "framebuffer-portcount", Buffer() { 0x01, 0x00, 0x00, 0x00 },
+                "framebuffer-pipecount", Buffer() { 0x01, 0x00, 0x00, 0x00 },
+                "framebuffer-portcount", Buffer() { 0x01, 0x00, 0x00, 0x00 },
             })
         }  
     }

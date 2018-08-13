@@ -45,11 +45,14 @@ case "$1" in
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-brcmpatchram -o $kexts_dir
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-usb-inject-all -o $kexts_dir
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-eapd-codec-commander -o $kexts_dir
+
+        # GitHub kexts
+        macos-tools/github_download.sh -u vit9696 -r Lilu -o $kexts_dir
+        macos-tools/github_download.sh -u acidanthera -r WhateverGreen -o $kexts_dir
     ;;
     --download-hotpatch)
         rm -Rf $hotpatch_dir && mkdir -p $hotpatch_dir
 
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-IGPU.dsl
         macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-HDEF.dsl
         macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-PNLF.dsl
         macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-XOSI.dsl

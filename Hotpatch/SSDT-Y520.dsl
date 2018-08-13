@@ -15,7 +15,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y520", 0)
     }
     
     #define NO_DEFINITIONBLOCK
-    #include "Downloads/SSDT-IGPU.dsl"
+    #include "SSDT-IGPU.dsl"
     #include "Downloads/SSDT-PNLF.dsl"
     #include "Downloads/SSDT-HDEF.dsl"
     #include "Downloads/SSDT-XCPM.dsl"

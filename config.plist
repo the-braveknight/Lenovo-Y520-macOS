@@ -6,6 +6,11 @@
 	<dict>
 		<key>DSDT</key>
 		<dict>
+			<key>Fixes</key>
+			<dict>
+				<key>FixRTC</key>
+				<true/>
+			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>

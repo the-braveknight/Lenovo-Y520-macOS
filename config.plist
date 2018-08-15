@@ -115,6 +115,11 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>Audio</key>
+		<dict>
+			<key>Inject</key>
+			<integer>7</integer>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>

@@ -120,6 +120,33 @@
 			<key>Inject</key>
 			<integer>7</integer>
 		</dict>
+		<key>AddProperties</key>
+		<array>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
+				<string>framebuffer-patch-enable</string>
+				<key>Value</key>
+				<data>AQAAAA==</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
+				<string>framebuffer-stolenmem</string>
+				<key>Value</key>
+				<data>AAAwAQ==</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
+				<string>framebuffer-fbmem</string>
+				<key>Value</key>
+				<data>AACQAA==</data>
+			</dict>
+		</array>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
@@ -150,8 +177,10 @@
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<false/>
+			<true/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string>0x591b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>

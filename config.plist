@@ -197,6 +197,10 @@
 				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>AAAwAQAAkAA=</data>
+				<key>Disabled</key>
+				<true/>
+				<key>Disabled-Comment</key>
+				<string>This patch is now handled by WhateverGreen.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -219,6 +223,10 @@
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6yI=</data>
+				<key>Disabled</key>
+				<true/>
+				<key>Disabled-Comment</key>
+				<string>This patch is now handled by WhateverGreen.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>

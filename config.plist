@@ -142,6 +142,11 @@
 				<data>AACQAA==</data>
 			</dict>
 		</array>
+		<key>Audio</key>
+		<dict>
+			<key>Inject</key>
+			<integer>7</integer>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
@@ -243,8 +248,6 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>ROM</key>
-		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>

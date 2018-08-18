@@ -31,6 +31,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC", 0)
                         "UsbConnector", 3,
                         "port", Buffer() { 3, 0, 0, 0 },
                     },
+                    "HS04", Package() // Right USB Type-C
+                    {
+                        "UsbConnector", 9,
+                        "port", Buffer() { 4, 0, 0, 0 },
+                    },
                     "HS06", Package() // Webcam
                     {
                         "UsbConnector", 255,
@@ -50,6 +55,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC", 0)
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 18, 0, 0, 0 },
+                    },
+                    "SS03", Package() // Right USB Type-C
+                    {
+                        "UsbConnector", 9,
+                        "port", Buffer() { 19, 0, 0, 0 },
                     },
                 },
             },

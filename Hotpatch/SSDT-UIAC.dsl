@@ -1,4 +1,5 @@
 // USBInjectAll.kext port configuration for Lenovo Y520
+// Not used - DSDT port properties are already correct
 
 #ifndef NO_DEFINITIONBLOCK
 DefinitionBlock ("", "SSDT", 2, "hack", "UIAC", 0)

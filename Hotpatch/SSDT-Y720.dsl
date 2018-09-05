@@ -1,6 +1,6 @@
 // Configuration data for other SSDTs in this pack (Y720).
 
-DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y520", 0)
+DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y720", 0)
 {
     #define NO_DEFINITIONBLOCK
     #include "Downloads/SSDT-PNLF.dsl"

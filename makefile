@@ -5,23 +5,29 @@
 
 BUILDDIR=./Build
 
-IASLOPTS=-vw 2095 -vw 2008
 IASL=iasl
 
 Y520=$(BUILDDIR)/SSDT-Y520.aml
+Y720=$(BUILDDIR)/SSDT-Y720.aml
 
 .PHONY: all
-all: $(Y520)
+all: $(Y520) $(Y720)
 	
 $(BUILDDIR)/%.aml : Hotpatch/%.dsl
-	$(IASL) $(IASLOPTS) -p $@ $<
+	$(IASL) -p $@ $<
 
 .PHONY: clean
 clean:
 	rm -f $(BUILDDIR)/*.aml
 
-.PHONY: install
-install: $(Y520)
+.PHONY: install_y520
+install_y520: $(Y520)
 	$(eval EFIDIR:=$(shell macos-tools/mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/*.aml
 	cp $(Y520) $(EFIDIR)/EFI/CLOVER/ACPI/patched
+
+.PHONY: install_y720
+install_y720: $(Y720)
+	$(eval EFIDIR:=$(shell macos-tools/mount_efi.sh))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/*.aml
+	cp $(Y720) $(EFIDIR)/EFI/CLOVER/ACPI/patched

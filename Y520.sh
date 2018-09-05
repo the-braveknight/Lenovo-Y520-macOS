@@ -92,11 +92,17 @@ case "$1" in
     --update-kernelcache)
         sudo kextcache -i /
     ;;
-    --install-config)
-        macos-tools/install_config.sh config.plist
+    --install-config-y520)
+        macos-tools/install_config.sh config_y520.plist
     ;;
-    --update-config)
-        macos-tools/install_config.sh -u config.plist
+    --install-config-y720)
+        macos-tools/install_config.sh config_y720.plist
+    ;;
+    --update-config-y520)
+        macos-tools/install_config.sh -u config_y520.plist
+    ;;
+    --update-config-y720)
+        macos-tools/install_config.sh -u config_y720.plist
     ;;
     --update)
     	echo "Checking for updates..."

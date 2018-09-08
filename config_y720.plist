@@ -79,6 +79,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>Change SAT0 to SATA</string>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Change GATY to GATX</string>
 					<key>Find</key>
 					<data>R0FUWQI=</data>

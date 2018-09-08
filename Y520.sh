@@ -53,6 +53,7 @@ case "$1" in
         rm -Rf $hotpatch_dir && mkdir -p $hotpatch_dir
         
         macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-PNLF.dsl
+        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-SATA.dsl
         macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-XOSI.dsl
         macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-XCPM.dsl
     ;;

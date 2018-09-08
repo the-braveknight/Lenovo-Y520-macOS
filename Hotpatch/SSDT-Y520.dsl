@@ -3,6 +3,7 @@
 DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y520", 0)
 {
     #define NO_DEFINITIONBLOCK
+    #include "Downloads/SSDT-SATA.dsl"
     #include "Downloads/SSDT-PNLF.dsl"
     #include "Downloads/SSDT-XCPM.dsl"
     #include "Downloads/SSDT-XOSI.dsl"

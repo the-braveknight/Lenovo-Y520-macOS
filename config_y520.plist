@@ -95,11 +95,19 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change (_REG,2,N) to XREG</string>
+					<string>Change Method(_REG,2,N) to XREG</string>
 					<key>Find</key>
 					<data>X1JFRwI=</data>
 					<key>Replace</key>
 					<data>WFJFRwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change Method(GPRW,2,N) to XPRW</string>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
 				</dict>
 			</array>
 		</dict>

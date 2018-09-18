@@ -5,40 +5,49 @@ DefinitionBlock ("", "SSDT", 2, "hack", "DGPU", 0)
 {
 #endif
 
-    External(_SB.PCI0.LPCB.EC, DeviceObj)
-    Scope(_SB.PCI0.LPCB.EC)
-    {
-        // The original GATY FieldUnitObj is renamed to GATX, so
-        // calls to GATY land here. This prevents crash when called
-        // before EC is initialized.
-        Name(GATY, 0)
-        
-        OperationRegion(ECR3, EmbeddedControl, 0x00, 0xFF)
-        
-        External(XREG, MethodObj)
-        External(GATX, FieldUnitObj)
-        Method(_REG, 2)
-        {
-            XREG(Arg0, Arg1)
-            
-            // Set original GATY (renamed to GATX) to zero.
-            If(Arg0 == 3 && Arg1 == 1) { GATX = 0 }
-        }
-    }
-    
     External(_SB.PCI0.PEG0.PEGP, DeviceObj)
     Scope(_SB.PCI0.PEG0.PEGP)
     {
-        External(_OFF, MethodObj)
-        Device(DGPU)
+        External(HGOF, MethodObj)
+        External(GPRF, IntObj)
+        External(VREG, FieldUnitObj)
+        External(VGAB, BuffObj)
+        External(XINI, MethodObj)
+        
+        Method(_INI)
         {
-            Name(_HID, "DGPU0000")
-            Method(_INI)
+            // Call original _INI (renamed XINI)
+            XINI() 
+            
+            // Code borrowed from _SB.PCI0.PEG0.PEGP._OFF
+            // EC related code moved to EC._REG
+            If (GPRF != 1)
             {
-                _OFF()
+                VGAB = VREG
+            }
+            HGOF()
+        }
+    }
+    
+    External(_SB.PCI0.LPCB.EC, DeviceObj)
+    Scope(_SB.PCI0.LPCB.EC)
+    {     
+        External(XREG, MethodObj)
+        External(GATY, FieldUnitObj)
+        
+        OperationRegion(ECR3, EmbeddedControl, 0x00, 0xFF)
+        
+        Method(_REG, 2)
+        {
+            XREG(Arg0, Arg1)
+            If(Arg0 == 3 && Arg1 == 1)
+            {
+                // EC related code moved from  _SB.PCI0.PEG0.PEGP._OFF
+                GATY = 0
             }
         }
     }
+    
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif

@@ -87,11 +87,11 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change GATY to GATX</string>
+					<string>Change Method(PEGP._INI,0,N) to XINI</string>
 					<key>Find</key>
-					<data>R0FUWQI=</data>
+					<data>X0lOSQBwAA==</data>
 					<key>Replace</key>
-					<data>R0FUWAI=</data>
+					<data>WElOSQBwAA==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>

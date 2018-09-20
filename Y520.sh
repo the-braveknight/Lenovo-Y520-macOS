@@ -7,7 +7,7 @@ downloads=Downloads
 local_kexts_dir=Kexts
 kexts_dir=$downloads/Kexts
 
-kexts_exceptions="Sensors|FakePCIID_BCM57XX|FakePCIID_Intel_GbX|FakePCIID_XHCIMux|FakePCIID_Intel_HD_Graphics|FakePCIID_AR9280_as_AR946x|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor"
+kexts_exceptions="Sensors|FakePCIID_BCM57XX|FakePCIID_Intel_GbX|FakePCIID_XHCIMux|FakePCIID_Intel_HD_Graphics|FakePCIID_AR9280_as_AR946x|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor|AppleIntelKBLGraphics|BroadcomWiFiInjector"
 
 tools_dir=$downloads/Tools
 

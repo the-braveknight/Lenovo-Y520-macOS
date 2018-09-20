@@ -7,7 +7,7 @@ downloads=Downloads
 local_kexts_dir=Kexts
 kexts_dir=$downloads/Kexts
 
-kexts_exceptions="Sensors|FakePCIID_BCM57XX|FakePCIID_Intel_GbX|FakePCIID_XHCIMux|FakePCIID_Intel_HD_Graphics|FakePCIID_AR9280_as_AR946x|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor|AppleIntelKBLGraphics|BroadcomWiFiInjector"
+kexts_exceptions="Sensors|FakePCIID_BCM57XX|FakePCIID_Intel_GbX|FakePCIID_XHCIMux|FakePCIID_Intel_HD_Graphics|FakePCIID_AR9280_as_AR946x|FakePCIID_Broadcom_WiFi|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor|AppleIntelKBLGraphics|BroadcomWiFiInjector"
 
 tools_dir=$downloads/Tools
 
@@ -51,6 +51,7 @@ case "$1" in
         macos-tools/github_download.sh -u vit9696 -r Lilu -o $kexts_dir
         macos-tools/github_download.sh -u acidanthera -r WhateverGreen -o $kexts_dir
         macos-tools/github_download.sh -u acidanthera -r VirtualSMC -o $kexts_dir
+        macos-tools/github_download.sh -u acidanthera -r AirportBrcmFixup -o $kexts_dir
     ;;
     --download-hotpatch)
         rm -Rf $hotpatch_dir && mkdir -p $hotpatch_dir

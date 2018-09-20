@@ -33,7 +33,7 @@ case "$1" in
     --download-tools)
         rm -Rf $tools_dir && mkdir -p $tools_dir
 
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-maciasl-patchmatic -o $tools_dir
+        macos-tools/github_download.sh -u acidanthera -r MaciASL -o $tools_dir
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-maciasl-patchmatic -f RehabMan-patchmatic -o $tools_dir
         macos-tools/bitbucket_download.sh -a RehabMan -n acpica -o $tools_dir
     ;;

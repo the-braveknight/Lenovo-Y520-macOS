@@ -84,7 +84,7 @@ case "$1" in
         EFI=$(macos-tools/mount_efi.sh)
         kext_dest=$EFI/EFI/CLOVER/kexts/Other
         rm -Rf $kext_dest/*.kext
-        macos-tools/install_kext.sh -s $kext_dest $(findKext VirtualSMC.kext) $(findKext RealtekRTL8111.kext) $(findKext FakePCIID.kext) $(findKext FakePCIID_Broadcom_WiFi.kext) $(findKext SMCBatteryManager.kext) $(findKext VoodooPS2Controller.kext)
+        macos-tools/install_kext.sh -s $kext_dest $(findKext VirtualSMC.kext) $(findKext RealtekRTL8111.kext) $(findKext Lilu.kext) $(findKext WhateverGreen.kext) $(findKext AirportBrcmFixup.kext) $(findKext SMCBatteryManager.kext) $(findKext VoodooPS2Controller.kext)
     ;;
     --install-hdainjector)
         macos-tools/create_hdainjector.sh -c $hda_codec -r $hda_resources -o $local_kexts_dir

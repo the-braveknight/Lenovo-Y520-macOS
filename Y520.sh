@@ -48,7 +48,7 @@ case "$1" in
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-eapd-codec-commander -o $kexts_dir
 
         # GitHub kexts
-        macos-tools/github_download.sh -u vit9696 -r Lilu -o $kexts_dir
+        macos-tools/github_download.sh -u acidanthera -r Lilu -o $kexts_dir
         macos-tools/github_download.sh -u acidanthera -r WhateverGreen -o $kexts_dir
         macos-tools/github_download.sh -u acidanthera -r VirtualSMC -o $kexts_dir
         macos-tools/github_download.sh -u acidanthera -r AirportBrcmFixup -o $kexts_dir

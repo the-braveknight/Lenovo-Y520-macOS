@@ -7,7 +7,7 @@ downloads=Downloads
 local_kexts_dir=Kexts
 kexts_dir=$downloads/Kexts
 
-kexts_exceptions="Sensors|FakePCIID_BCM57XX|FakePCIID_Intel_GbX|FakePCIID_XHCIMux|FakePCIID_Intel_HD_Graphics|FakePCIID_AR9280_as_AR946x|FakePCIID_Broadcom_WiFi|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor|AppleIntelKBLGraphics|BroadcomWiFiInjector"
+kexts_exceptions="Sensors|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor|AppleIntelKBLGraphics|BroadcomWiFiInjector"
 
 tools_dir=$downloads/Tools
 
@@ -42,10 +42,8 @@ case "$1" in
 
         # Bitbucket kexts
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-realtek-network -o $kexts_dir
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-fake-pci-id -o $kexts_dir
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-voodoo-ps2-controller -o $kexts_dir
         macos-tools/bitbucket_download.sh -a RehabMan -n os-x-brcmpatchram -o $kexts_dir
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-eapd-codec-commander -o $kexts_dir
 
         # GitHub kexts
         macos-tools/github_download.sh -u acidanthera -r Lilu -o $kexts_dir

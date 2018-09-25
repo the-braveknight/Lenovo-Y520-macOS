@@ -229,6 +229,16 @@
 				<key>Replace</key>
 				<data>NQLsEA==</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>100-Series Audio - 0xa170 -&gt; 0xa171</string>
+				<key>Find</key>
+				<data>cKE=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleHDAController</string>
+				<key>Replace</key>
+				<data>caE=</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>

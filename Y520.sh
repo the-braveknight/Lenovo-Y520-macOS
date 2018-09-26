@@ -94,10 +94,11 @@ case "$1" in
     --install-voodootscsync)
         macos-tools/install_kext.sh $local_kexts_dir/VoodooTSCSync.kext
     ;;
-    --remove-old-kexts)
-        # Remove kexts that are not used anymore
-        removeKext FakeSMC.kext
-        removeKext ACPIBatteryManager.kext
+    --remove-installed-kexts)
+        # Remove kexts that have been installed by this script previously
+        for kext in $(macos-tools/installed_kexts.sh); do
+            removeKext $kext
+        done
     ;;
     --update-kernelcache)
         sudo kextcache -i /
@@ -128,7 +129,7 @@ case "$1" in
     --install-downloads)
         $0 --install-binaries
         $0 --install-apps
-        $0 --remove-old-kexts
+        $0 --remove-installed-kexts
         $0 --install-essential-kexts
         $0 --install-kexts
     ;;

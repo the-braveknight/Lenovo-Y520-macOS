@@ -85,7 +85,7 @@ case "$1" in
         macos-tools/install_kext.sh -s $kext_dest $(findKext VirtualSMC.kext) $(findKext RealtekRTL8111.kext) $(findKext Lilu.kext) $(findKext WhateverGreen.kext) $(findKext AirportBrcmFixup.kext) $(findKext SMCBatteryManager.kext) $(findKext VoodooPS2Controller.kext)
     ;;
     --install-hdainjector)
-        macos-tools/create_hdainjector.sh -c $hda_codec -r $hda_resources -o $local_kexts_dir
+        macos-tools/create_hda_injector.sh -c $hda_codec -r $hda_resources -o $local_kexts_dir
         macos-tools/install_kext.sh $local_kexts_dir/AppleHDA_$hda_codec.kext
     ;;
     --install-backlightinjector)

@@ -100,6 +100,13 @@ case "$1" in
             removeKext $kext
         done
     ;;
+    --remove-deprecated-kexts)
+        # Remove deprecated kexts
+        # More info: https://github.com/the-braveknight/macos-tools/blob/master/org.the-braveknight.deprecated.plist
+        for kext in $(macos-tools/deprecated_kexts.sh); do
+            removeKext $kext
+        done
+    ;;
     --update-kernelcache)
         sudo kextcache -i /
     ;;
@@ -129,7 +136,7 @@ case "$1" in
     --install-downloads)
         $0 --install-binaries
         $0 --install-apps
-        $0 --remove-installed-kexts
+        $0 --remove-deprecated-kexts
         $0 --install-essential-kexts
         $0 --install-kexts
     ;;

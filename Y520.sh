@@ -1,143 +1,32 @@
 #!/bin/bash
 
-#set -x
+repo_dir=$(dirname ${BASH_SOURCE[0]})
 
-downloads=Downloads
+macos_tools=$repo_dir/macos-tools
 
-local_kexts_dir=Kexts
-kexts_dir=$downloads/Kexts
-
-kexts_exceptions="Sensors|BrcmFirmwareData|PatchRAM.kext|SMCLightSensor|SMCProcessor|AppleIntelKBLGraphics|BroadcomWiFiInjector"
-
-tools_dir=$downloads/Tools
-
-hotpatch_dir=Hotpatch/Downloads
-
-hda_codec=ALC235
-hda_resources=Resources_$hda_codec
-
-if [[ ! -d macos-tools ]]; then
+if [[ ! -d $macos_tools ]]; then
     echo "Downloading latest macos-tools..."
-    rm -Rf macos-tools && git clone https://github.com/the-braveknight/macos-tools --quiet
+    rm -Rf $macos_tools && git clone https://github.com/the-braveknight/macos-tools $macos_tools --quiet
 fi
 
-function findKext() {
-    find $kexts_dir $local_kexts_dir -name $1 -not -path \*/PlugIns/* -not -path \*/Debug/*
-}
+downloads_dir=$repo_dir/Downloads
+local_kexts_dir=$repo_dir/Kexts
+hotpatch_dir=$repo_dir/Hotpatch/Downloads
+repo_plist=$repo_dir/org.the-braveknight.y520.plist
 
-function removeKext() {
-    sudo rm -Rf /Library/Extensions/$1 /System/Library/Extensions/$1
-}
+source $macos_tools/_hack_cmds.sh
 
 case "$1" in
-    --download-tools)
-        rm -Rf $tools_dir && mkdir -p $tools_dir
-
-        macos-tools/github_download.sh -u acidanthera -r MaciASL -o $tools_dir
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-maciasl-patchmatic -f RehabMan-patchmatic -o $tools_dir
-        macos-tools/bitbucket_download.sh -a RehabMan -n acpica -o $tools_dir
-    ;;
-    --download-kexts)
-        rm -Rf $kexts_dir && mkdir -p $kexts_dir
-
-        # Bitbucket kexts
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-realtek-network -o $kexts_dir
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-voodoo-ps2-controller -o $kexts_dir
-        macos-tools/bitbucket_download.sh -a RehabMan -n os-x-brcmpatchram -o $kexts_dir
-
-        # GitHub kexts
-        macos-tools/github_download.sh -u acidanthera -r Lilu -o $kexts_dir
-        macos-tools/github_download.sh -u acidanthera -r WhateverGreen -o $kexts_dir
-        macos-tools/github_download.sh -u acidanthera -r VirtualSMC -o $kexts_dir
-        macos-tools/github_download.sh -u acidanthera -r AirportBrcmFixup -o $kexts_dir
-    ;;
-    --download-hotpatch)
-        rm -Rf $hotpatch_dir && mkdir -p $hotpatch_dir
-
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-IGPU.dsl
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-PNLF.dsl
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-SATA.dsl
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-GPRW.dsl
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-XCPM.dsl
-        macos-tools/hotpatch_download.sh -o $hotpatch_dir SSDT-XOSI.dsl
-    ;;
-    --install-apps)
-    	macos-tools/unarchive_file.sh -d $tools_dir
-        macos-tools/install_app.sh -d $tools_dir
-    ;;
-    --install-binaries)
-    	macos-tools/unarchive_file.sh -d $tools_dir
-        macos-tools/install_binary.sh -d $tools_dir
-    ;;
-    --install-kexts)
-    	macos-tools/unarchive_file.sh -d $kexts_dir
-        macos-tools/install_kext.sh -d $kexts_dir -e $kexts_exceptions
-        $0 --install-hdainjector
-        $0 --install-backlightinjector
-        $0 --install-voodootscsync
-        $0 --update-kernelcache
-    ;;
-    --install-essential-kexts)
-    	macos-tools/unarchive_file.sh -d $kexts_dir
-        EFI=$(macos-tools/mount_efi.sh)
-        kext_dest=$EFI/EFI/CLOVER/kexts/Other
-        rm -Rf $kext_dest/*.kext
-        macos-tools/install_kext.sh -s $kext_dest $(findKext VirtualSMC.kext) $(findKext RealtekRTL8111.kext) $(findKext Lilu.kext) $(findKext WhateverGreen.kext) $(findKext AirportBrcmFixup.kext) $(findKext SMCBatteryManager.kext) $(findKext VoodooPS2Controller.kext)
-    ;;
-    --install-hdainjector)
-        macos-tools/create_hda_injector.sh -c $hda_codec -r $hda_resources -o $local_kexts_dir
-        macos-tools/install_kext.sh $local_kexts_dir/AppleHDA_$hda_codec.kext
-    ;;
-    --install-backlightinjector)
-        macos-tools/install_kext.sh $local_kexts_dir/AppleBacklightInjector.kext
-    ;;
-    --install-voodootscsync)
-        macos-tools/install_kext.sh $local_kexts_dir/VoodooTSCSync.kext
-    ;;
-    --remove-installed-kexts)
-        # Remove kexts that have been installed by this script previously
-        for kext in $(macos-tools/installed_kexts.sh); do
-            removeKext $kext
-        done
-    ;;
-    --remove-deprecated-kexts)
-        # Remove deprecated kexts
-        # More info: https://github.com/the-braveknight/macos-tools/blob/master/org.the-braveknight.deprecated.plist
-        for kext in $(macos-tools/deprecated_kexts.sh); do
-            removeKext $kext
-        done
-    ;;
-    --update-kernelcache)
-        sudo kextcache -i /
-    ;;
     --install-config-y520)
-        macos-tools/install_config.sh config_y520.plist
+        installConfig $repo_dir/config_y520.plist
     ;;
     --install-config-y720)
-        macos-tools/install_config.sh config_y720.plist
+         installConfig $repo_dir/config_y720.plist
     ;;
     --update-config-y520)
-        macos-tools/install_config.sh -u config_y520.plist
+        updateConfig $repo_dir/config_y520.plist
     ;;
     --update-config-y720)
-        macos-tools/install_config.sh -u config_y720.plist
-    ;;
-    --update)
-    	echo "Checking for updates..."
-        git stash --quiet && git pull
-        echo "Checking for macos-tools updates..."
-        cd macos-tools && git stash --quiet && git pull && cd ..
-    ;;
-    --download-requirements)
-        $0 --download-kexts
-        $0 --download-tools
-        $0 --download-hotpatch
-    ;;
-    --install-downloads)
-        $0 --install-binaries
-        $0 --install-apps
-        $0 --remove-deprecated-kexts
-        $0 --install-essential-kexts
-        $0 --install-kexts
+         updateConfig $repo_dir/config_y720.plist
     ;;
 esac

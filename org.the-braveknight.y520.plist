@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Downloads</key>
+	<dict>
+		<key>Hotpatch</key>
+		<array>
+			<string>SSDT-IGPU.dsl</string>
+			<string>SSDT-PNLF.dsl</string>
+			<string>SSDT-SATA.dsl</string>
+			<string>SSDT-GPRW.dsl</string>
+			<string>SSDT-XCPM.dsl</string>
+			<string>SSDT-XOSI.dsl</string>
+		</array>
+		<key>Acidanthera</key>
+		<array>
+			<string>MaciASL</string>
+			<string>Lilu</string>
+			<string>WhateverGreen</string>
+			<string>VirtualSMC</string>
+			<string>AirportBrcmFixup</string>
+		</array>
+		<key>RehabMan</key>
+		<array>
+			<string>acpica</string>
+			<string>os-x-realtek-network</string>
+			<string>os-x-voodoo-ps2-controller</string>
+			<string>os-x-brcmpatchram</string>
+		</array>
+	</dict>
+	<key>Exceptions</key>
+	<array>
+		<string>Sensors</string>
+		<string>BrcmFirmwareData</string>
+		<string>PatchRAM.kext</string>
+		<string>SMCLightSensor</string>
+		<string>SMCProcessor</string>
+		<string>AppleIntelKBLGraphics</string>
+		<string>BroadcomWiFiInjector</string>
+		<string>WhateverName</string>
+		<string>smc</string>
+		<string>rtc</string>
+		<string>libaistat</string>
+	</array>
+	<key>Codec</key>
+	<string>ALC235</string>
+</dict>
+</plist>

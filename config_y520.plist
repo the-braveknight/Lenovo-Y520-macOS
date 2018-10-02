@@ -231,6 +231,16 @@
 				<key>Replace</key>
 				<data>caE=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Micro Inc. SD Card Reader - pci14e4,16bc -&gt; pci1217,8621</string>
+				<key>Find</key>
+				<data>cGNpMTRlNCwxNmJj</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleSDXC</string>
+				<key>Replace</key>
+				<data>cGNpMTIxNyw4NjIx</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>

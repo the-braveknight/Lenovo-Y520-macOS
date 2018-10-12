@@ -131,7 +131,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1 -disablegfxfirmware</string>
+		<string>dart=0</string>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -146,7 +146,7 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<key>PciRoot(0)/Pci(0x2,0)</key>
 			<dict>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
@@ -190,8 +190,6 @@
 			<key>Intel</key>
 			<false/>
 		</dict>
-		<key>ig-platform-id</key>
-		<string>0x591b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -199,16 +197,6 @@
 		<true/>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
-				<key>Find</key>
-				<data>RiV1VCUwNHgA</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleBacklight</string>
-				<key>Replace</key>
-				<data>RiV1VHh4eHgA</data>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>ALC261 to 0</string>

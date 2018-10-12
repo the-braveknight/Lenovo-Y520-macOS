@@ -46,7 +46,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1 -disablegfxfirmware</string>
+		<string>dart=0</string>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -87,17 +87,22 @@
 				<string>Inject bogus class-code to prevent graphics drivers loading for NVidia</string>
 			</dict>
 		</array>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0)/Pci(0x2,0)</key>
+			<dict>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+			</dict>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
 			<true/>
-		</dict>
-		<key>FakeID</key>
-		<dict>
-			<key>IntelGFX</key>
-			<string>0x12345678</string>
-			<key>IntelGFX-Comment</key>
-			<string>Prevent IGPU drivers from loading to avoid problems caused by invalid DVMT-prealloc.</string>
 		</dict>
 	</dict>
 	<key>GUI</key>
@@ -128,6 +133,8 @@
 			<key>NVidia</key>
 			<true/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string>0x591b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>

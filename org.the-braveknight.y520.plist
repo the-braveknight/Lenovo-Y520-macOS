@@ -28,6 +28,7 @@
 			<string>os-x-voodoo-ps2-controller</string>
 			<string>os-x-brcmpatchram</string>
 			<string>applebacklightfixup</string>
+			<string>voodootscsync</string>
 		</array>
 	</dict>
 	<key>Exceptions</key>

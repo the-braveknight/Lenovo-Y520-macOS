@@ -1,5 +1,6 @@
 .DS_Store
 Kexts/AppleHDA*
+Kexts/LiluHelper.kext
 Build/*.aml
 Downloads/*
 Hotpatch/Downloads

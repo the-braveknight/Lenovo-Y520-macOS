@@ -1,7 +1,6 @@
 .DS_Store
-Kexts/AppleHDA*
-Kexts/LiluHelper.kext
 Build/*.aml
+Build/*.kext
 Downloads/*
-Hotpatch/Downloads
+Hotpatch/Downloads/*
 macos-tools

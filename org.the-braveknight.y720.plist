@@ -44,7 +44,6 @@
 		<string>smc</string>
 		<string>rtc</string>
 		<string>libaistat</string>
-		<string>AppleSDXCInjector</string>
 	</array>
 	<key>Essentials</key>
 	<dict>
@@ -73,7 +72,6 @@
 			<string>CodecCommander.kext</string>
 			<string>USBInjectAll.kext</string>
 			<string>AppleBacklightInjector.kext</string>
-			<string>AppleSDXCInjector.kext</string>
 		</array>
 	</dict>
 	<key>Codec</key>

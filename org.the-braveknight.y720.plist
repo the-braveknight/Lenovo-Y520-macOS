@@ -34,6 +34,12 @@
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
+				<string>AppleALC</string>
+			</dict>
+			<dict>
+				<key>Author</key>
+				<string>acidanthera</string>
+				<key>Repo</key>
 				<string>MaciASL</string>
 			</dict>
 		</array>
@@ -166,7 +172,7 @@
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string>AppleHDA_ALC235.kext</string>
+				<string>AppleALC.kext</string>
 			</dict>
 			<dict>
 				<key>Name</key>
@@ -208,7 +214,5 @@
 			<string>AppleBacklightInjector.kext</string>
 		</array>
 	</dict>
-	<key>Codec</key>
-	<string>ALC235</string>
 </dict>
 </plist>

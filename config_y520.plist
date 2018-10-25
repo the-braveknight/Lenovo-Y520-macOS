@@ -191,36 +191,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>ALC261 to 0</string>
-				<key>Find</key>
-				<data>YQLsEA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ALC262 to ALC235</string>
-				<key>Find</key>
-				<data>YgLsEA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Replace</key>
-				<data>NQLsEA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>100-Series Audio - 0xa170 -&gt; 0xa171</string>
-				<key>Find</key>
-				<data>cKE=</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDAController</string>
-				<key>Replace</key>
-				<data>caE=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Micro Inc. SD Card Reader - pci14e4,16bc -&gt; pci1217,8621</string>
 				<key>Find</key>
 				<data>cGNpMTRlNCwxNmJj</data>

@@ -212,6 +212,7 @@
 			<string>CodecCommander.kext</string>
 			<string>USBInjectAll.kext</string>
 			<string>AppleBacklightInjector.kext</string>
+			<string>AppleHDA_ALC235.kext</string>
 		</array>
 	</dict>
 </dict>

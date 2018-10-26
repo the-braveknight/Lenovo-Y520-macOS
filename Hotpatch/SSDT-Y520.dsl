@@ -6,6 +6,12 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y520", 0)
     {
         Name(_ADR, 0)
         
+        // AUDL: Audio Layout
+        //
+        // The value here will be used to inject layout-id for HDEF and HDAU
+        // If set to Ones, no audio injection will be done.
+        Name(AUDL, 28)
+        
         // DAUD: Digital audio
         //
         // 0: "hda-gfx" is disabled, injected as "#hda-gfx" instead
@@ -26,6 +32,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y520", 0)
     #include "Downloads/SSDT-GPRW.dsl"
     #include "Downloads/SSDT-XCPM.dsl"
     #include "Downloads/SSDT-XOSI.dsl"
+    #include "Downloads/SSDT-HDEF.dsl"
     #include "SSDT-PS2K.dsl"
     #include "SSDT-USBX.dsl"
     #include "SSDT-DGPU.dsl"

@@ -254,6 +254,7 @@
 			<string>SSDT-GPRW.dsl</string>
 			<string>SSDT-XCPM.dsl</string>
 			<string>SSDT-XOSI.dsl</string>
+			<string>SSDT-HDEF.dsl</string>
 		</array>
 	</dict>
 	<key>Deprecated</key>

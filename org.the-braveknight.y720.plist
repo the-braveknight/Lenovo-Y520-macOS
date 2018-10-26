@@ -11,36 +11,110 @@
 				<string>acidanthera</string>
 				<key>Repo</key>
 				<string>Lilu</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>Lilu.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
 				<string>VirtualSMC</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>VirtualSMC.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>Name</key>
+							<string>SMCBatteryManager.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
 				<string>WhateverGreen</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>WhateverGreen.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
 				<string>AirportBrcmFixup</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>AirportBrcmFixup.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
 				<string>AppleALC</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>AppleALC.kext</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
 				<string>MaciASL</string>
+				<key>Installations</key>
+				<dict>
+					<key>Apps</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>MaciASL.app</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 		</array>
 		<key>Bitbucket</key>
@@ -50,36 +124,108 @@
 				<string>RehabMan</string>
 				<key>Repo</key>
 				<string>os-x-voodoo-ps2-controller</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>VoodooPS2Controller.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>RehabMan</string>
 				<key>Repo</key>
 				<string>os-x-realtek-network</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>RealtekRTL8111.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>RehabMan</string>
 				<key>Repo</key>
 				<string>os-x-brcmpatchram</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>BrcmPatchRAM2.kext</string>
+						</dict>
+						<dict>
+							<key>Name</key>
+							<string>BrcmNonPatchRAM2.kext</string>
+						</dict>
+						<dict>
+							<key>Name</key>
+							<string>BrcmFirmwareRepo.kext</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>RehabMan</string>
 				<key>Repo</key>
 				<string>applebacklightfixup</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>AppleBacklightFixup.kext</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>RehabMan</string>
 				<key>Repo</key>
 				<string>voodootscsync</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>VoodooTSCSync.kext</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
 				<string>RehabMan</string>
 				<key>Repo</key>
 				<string>acpica</string>
+				<key>Installations</key>
+				<dict>
+					<key>Tools</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>iasl</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 			<dict>
 				<key>Author</key>
@@ -88,6 +234,16 @@
 				<string>os-x-maciasl-patchmatic</string>
 				<key>Name</key>
 				<string>RehabMan-patchmatic</string>
+				<key>Installations</key>
+				<dict>
+					<key>Tools</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>patchmatic</string>
+						</dict>
+					</array>
+				</dict>
 			</dict>
 		</array>
 		<key>Hotpatch</key>
@@ -100,101 +256,13 @@
 			<string>SSDT-XOSI.dsl</string>
 		</array>
 	</dict>
-	<key>Installations</key>
+	<key>Local Installations</key>
 	<dict>
 		<key>Kexts</key>
 		<array>
 			<dict>
 				<key>Name</key>
-				<string>Lilu.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>VirtualSMC.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>WhateverGreen.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>VoodooPS2Controller.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>SMCBatteryManager.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>AirportBrcmFixup.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>RealtekRTL8111.kext</string>
-				<key>Essential</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>LiluHelper.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>AppleBacklightFixup.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>VoodooTSCSync.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>BrcmPatchRAM2.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>BrcmNonPatchRAM2.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>BrcmFirmwareRepo.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>AppleALC.kext</string>
-			</dict>
-			<dict>
-				<key>Name</key>
 				<string>AppleSDXCInjector.kext</string>
-			</dict>
-		</array>
-		<key>Apps</key>
-		<array>
-			<dict>
-				<key>Name</key>
-				<string>MaciASL.app</string>
-			</dict>
-		</array>
-		<key>Tools</key>
-		<array>
-			<dict>
-				<key>Name</key>
-				<string>iasl</string>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>patchmatic</string>
 			</dict>
 		</array>
 	</dict>

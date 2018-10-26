@@ -271,16 +271,7 @@
 	<dict>
 		<key>Kexts</key>
 		<array>
-			<string>FakeSMC.kext</string>
-			<string>ACPIBatteryManager.kext</string>
-			<string>FakePCIID.kext</string>
-			<string>FakePCIID_Intel_HD_Graphics.kext</string>
-			<string>FakePCIID_Intel_HDMI_Audio.kext</string>
-			<string>FakePCIID_Broadcom_WiFi.kext</string>
-			<string>IntelGraphicsFixup.kext</string>
 			<string>CodecCommander.kext</string>
-			<string>USBInjectAll.kext</string>
-			<string>AppleBacklightInjector.kext</string>
 			<string>AppleHDA_ALC235.kext</string>
 		</array>
 	</dict>

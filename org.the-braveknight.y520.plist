@@ -263,7 +263,16 @@
 		<array>
 			<string>CodecCommander.kext</string>
 			<string>AppleHDA_ALC235.kext</string>
-			<string>AppleSDXCInjector.kext</string>
+		</array>
+	</dict>
+	<key>Local Installations</key>
+	<dict>
+		<key>Kexts</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>AppleSDXCInjector.kext</string>
+			</dict>
 		</array>
 	</dict>
 </dict>

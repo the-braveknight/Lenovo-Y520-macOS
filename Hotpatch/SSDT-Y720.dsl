@@ -10,7 +10,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y720", 0)
         //
         // The value here will be used to inject layout-id for HDEF and HDAU
         // If set to Ones, no audio injection will be done.
-        Name(AUDL, 28)
+        Name(AUDL, 14)
         
         // DAUD: Digital audio
         //

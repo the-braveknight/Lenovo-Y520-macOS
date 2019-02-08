@@ -183,22 +183,6 @@
 				<key>Author</key>
 				<string>RehabMan</string>
 				<key>Repo</key>
-				<string>applebacklightfixup</string>
-				<key>Installations</key>
-				<dict>
-					<key>Kexts</key>
-					<array>
-						<dict>
-							<key>Name</key>
-							<string>AppleBacklightFixup.kext</string>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<dict>
-				<key>Author</key>
-				<string>RehabMan</string>
-				<key>Repo</key>
 				<string>voodootscsync</string>
 				<key>Installations</key>
 				<dict>
@@ -264,6 +248,7 @@
 			<string>CodecCommander.kext</string>
 			<string>AppleHDA_ALC235.kext</string>
 			<string>AppleSDXCInjector.kext</string>
+			<string>AppleBacklightFixup.kext</string>
 		</array>
 	</dict>
 </dict>

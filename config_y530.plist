@@ -87,27 +87,19 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change Method(PEGP._INI,0,N) to XINI</string>
-					<key>Find</key>
-					<data>X0lOSQBwAA==</data>
-					<key>Replace</key>
-					<data>WElOSQBwAA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change Method(_REG,2,N) to XREG</string>
-					<key>Find</key>
-					<data>X1JFRwI=</data>
-					<key>Replace</key>
-					<data>WFJFRwI=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Change Method(GPRW,2,N) to XPRW</string>
 					<key>Find</key>
 					<data>R1BSVwI=</data>
 					<key>Replace</key>
 					<data>WFBSVwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(_PTS,1,N) to ZPTS</string>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>

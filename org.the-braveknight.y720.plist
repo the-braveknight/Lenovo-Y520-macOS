@@ -230,16 +230,6 @@
 				</dict>
 			</dict>
 		</array>
-		<key>Hotpatch</key>
-		<array>
-			<string>SSDT-IGPU.dsl</string>
-			<string>SSDT-PNLF.dsl</string>
-			<string>SSDT-SATA.dsl</string>
-			<string>SSDT-GPRW.dsl</string>
-			<string>SSDT-XCPM.dsl</string>
-			<string>SSDT-XOSI.dsl</string>
-			<string>SSDT-HDEF.dsl</string>
-		</array>
 	</dict>
 	<key>Deprecated</key>
 	<dict>

@@ -42,7 +42,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "TBK-Y530", 0)
     #include "Downloads/SSDT-DDGPU.dsl"
     #include "Downloads/SSDT-SATA.dsl"
     #include "Downloads/SSDT-GPRW.dsl"
-    #include "SSDT-XCPM.dsl"
+    #include "SSDT-Y530-XCPM.dsl"
     #include "Downloads/SSDT-XOSI.dsl"
     #include "Downloads/SSDT-HDEF.dsl"
     #include "Downloads/SSDT-PTSWAK.dsl"

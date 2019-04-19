@@ -28,6 +28,24 @@
 				<key>Author</key>
 				<string>acidanthera</string>
 				<key>Repo</key>
+				<string>VoodooPS2</string>
+				<key>Installations</key>
+				<dict>
+					<key>Kexts</key>
+					<array>
+						<dict>
+							<key>Name</key>
+							<string>VoodooPS2Controller.kext</string>
+							<key>Essential</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<dict>
+				<key>Author</key>
+				<string>acidanthera</string>
+				<key>Repo</key>
 				<string>VirtualSMC</string>
 				<key>Installations</key>
 				<dict>
@@ -119,24 +137,6 @@
 		</array>
 		<key>Bitbucket</key>
 		<array>
-			<dict>
-				<key>Author</key>
-				<string>RehabMan</string>
-				<key>Repo</key>
-				<string>os-x-voodoo-ps2-controller</string>
-				<key>Installations</key>
-				<dict>
-					<key>Kexts</key>
-					<array>
-						<dict>
-							<key>Name</key>
-							<string>VoodooPS2Controller.kext</string>
-							<key>Essential</key>
-							<true/>
-						</dict>
-					</array>
-				</dict>
-			</dict>
 			<dict>
 				<key>Author</key>
 				<string>RehabMan</string>

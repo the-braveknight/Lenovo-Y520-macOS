@@ -22,8 +22,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "PS2K", 0)
         }
     }
     
-    // Custom mapping via ACPI now broken (causes KP) with Acidanthera's new VoodooPS2 fork
-    /*
     External(_SB.PCI0.LPCB.PS2K, DeviceObj)
     Scope(_SB.PCI0.LPCB.PS2K)
     {
@@ -39,6 +37,10 @@ DefinitionBlock("", "SSDT", 2, "hack", "PS2K", 0)
         
         Name(RMCF, Package()
         {
+            "Synaptics TouchPad", Package()
+            {
+                "ForceTouchMode", 2,
+            },
             "Keyboard", Package()
             {
                 "Custom PS2 Map", Package()
@@ -48,7 +50,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "PS2K", 0)
             },
         })
     }
-    */
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
